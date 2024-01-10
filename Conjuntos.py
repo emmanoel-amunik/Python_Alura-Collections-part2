@@ -57,3 +57,42 @@ phrase = ("Allegri's haunting Miserere is famous for both its ethereal beauty "
 phrase.split(' ')
 phrase = set(phrase.split())
 print(phrase)
+
+appearances = {"Miserere": 1,
+               "famous": 2,
+               "phrase": 2,
+               "final": 1
+               }
+
+print(type(appearances))
+print(appearances["Miserere"])
+print(appearances["famous"])
+# print(appearances["xpto"])
+# appearances.get("xpto", 0)  # ', 0' to return 0, in this case
+
+
+appearances["Carlos"] = 2
+print(appearances)
+
+del appearances["Carlos"]
+print(appearances)
+
+print("final" in appearances)
+print("Carlos" in appearances)
+
+for elements in appearances:
+    print(elements)
+
+for elements in appearances.keys():  # keys
+    print(elements)
+
+for elements in appearances.values():  # values
+    print(elements)
+
+for elements in appearances.items():  # items
+    print(elements)
+
+print(1 in appearances.values())
+
+for key, value in appearances.items():  # unpacked
+    print(f"{key} = {value}")
