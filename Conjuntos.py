@@ -1,3 +1,6 @@
+from collections import defaultdict
+from collections import Counter
+
 data_science_users = [15, 23, 43, 56]
 machine_learning_users = [13, 23, 56, 42]
 
@@ -96,3 +99,28 @@ print(1 in appearances.values())
 
 for key, value in appearances.items():  # unpacked
     print(f"{key} = {value}")
+
+phrase = ("Allegri's haunting Miserere is famous for both its ethereal beauty "
+          "and for the mystery surrounding its composition. It is written "
+          "for 2 choirs, who alternate phrases and then unite for a final "
+          "resolution.")
+phrase = phrase.lower()
+
+appearances2 = defaultdict(int)
+for word in phrase.split():
+    appearances2[word] += 1
+
+appearances2 = Counter(phrase.split())
+print(appearances2)
+
+print(appearances2)
+
+
+class Account:
+    def __init__(self):
+        print("making new acc")
+
+
+accounts = defaultdict(Account)
+print(accounts[15])
+print(accounts[17]
